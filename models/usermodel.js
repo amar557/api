@@ -35,7 +35,7 @@ userSchema.methods.generateToken = async function () {
         email: this.email,
         isAdmin: this.isAdmin,
       },
-      "secretkeyisgivenbyamar",
+      process.env.JWT_KEY,
       { expiresIn: "30d" }
     );
   } catch (error) {

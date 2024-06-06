@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
+import "dotenv/config";
 // const URI = process.env.MONGODB_URI;
-const URI = "mongodb://127.0.0.1:27017/mern_app";
+const URI = process.env.MONGODB_URI;
 
 const connectDB = async () => {
   try {
