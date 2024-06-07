@@ -5,6 +5,7 @@ export const checkIsauthorized = async (req, res, next) => {
   // console.log(token);
   if (!token) {
     // console.log(token);
+    console.log(token);
     res.status(401).send({ message: "token is not autherized ", token });
   } else {
     const user2 = jwt.verify(token, "secretkeyisgivenbyamar");
